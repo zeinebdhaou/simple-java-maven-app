@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sh \'sh `mvn  compile`\''
+        sh 'sh `mvn  compile`'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'sh \'sh `mvn test`\''
+        sh 'sh `mvn test`'
       }
     }
 
     stage('Deliver') {
       steps {
-        sh 'sh \'sh `./jenkins/scripts/deliver.sh`\''
+        sh 'sh `./jenkins/scripts/deliver.sh`'
       }
     }
 
